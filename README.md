@@ -4,6 +4,12 @@ CueSmart ESP-70 is an ESP32-S3-based Ethernet-to-CAN gateway for controlling and
 
 The firmware targets the ESP32-S3-ETH board with a W5500 Ethernet interface. It includes a browser-based configuration interface, DHCP or static IP addressing, and four GPI inputs with configurable amplifier preset routes.
 
+## Tested setup and amplifier limit
+
+**rev1 has been tested in continuous operation with 20 d&b D12 amplifiers.** This revision supports a maximum of **20 amplifiers**; operation with more than 20 amplifiers is not supported.
+
+Support for additional amplifiers may be introduced in a future revision, but is not guaranteed.
+
 ## R1 timeout notice
 
 Due to the ESP32-based architecture and its shared processing of Ethernet, CAN communication, and other firmware tasks, **rare timeouts may appear in R1**. Please take this limitation into account when using the gateway; timeout-free operation is not guaranteed.
