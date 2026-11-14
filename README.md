@@ -47,3 +47,11 @@ Serial diagnostic output and test commands are disabled by default. To restore t
 ## Revision
 
 The **rev1** tag marks the initial firmware snapshot, including the onboard LED behavior and disabled serial diagnostics. Later documentation updates are available on `main`.
+
+## No warranty and limitation of liability
+
+This project, including its firmware, source code, and documentation, is provided **“AS IS” and “AS AVAILABLE”**, without warranty of any kind, express or implied, including warranties of merchantability, fitness for a particular purpose, and non-infringement. No guarantee is made regarding reliability, compatibility, uninterrupted operation, or freedom from errors or timeouts.
+
+Use this project at your own risk. You are responsible for testing and validating it with your equipment before use, including in live or production environments.
+
+To the maximum extent permitted by applicable law, the authors and contributors shall not be liable for any claims, damages, or other liability arising from the use of, or inability to use, this project, including equipment damage, data loss, loss of revenue, or interruption of operations, whether in contract, tort, or otherwise. Nothing in this disclaimer excludes or limits liability that cannot legally be excluded or limited.
