@@ -38,6 +38,26 @@ A factory reset can be triggered through the web interface or by holding the fac
 
 The firmware has been compiled for `esp32:esp32:esp32s3` using ESP32 Arduino core **3.3.8**. The repository includes the project library and the required Ethernet **2.0.2** and Adafruit NeoPixel **1.15.4** libraries.
 
+### Required libraries and Arduino IDE setup
+
+Install the **ESP32 board package by Espressif Systems, version 3.3.8**, through the Arduino IDE Boards Manager, and select **ESP32S3 Dev Module**.
+
+The sketch requires these libraries:
+
+| Library | Tested version | Installation source |
+| --- | --- | --- |
+| dbR70EmulatorV2 | 0.8.0 (bundled project version) | Copy `libraries/dbR70EmulatorV2` from this repository into your Arduino sketchbook's `libraries` folder. |
+| Ethernet | 2.0.2 | Install through Library Manager, or copy the bundled `libraries/Ethernet` folder. |
+| Adafruit NeoPixel | 1.15.4 | Install through Library Manager, or copy the bundled `libraries/Adafruit_NeoPixel` folder. |
+
+For the exact library sources used by this project, copy all three bundled library folders into your sketchbook's `libraries` directory. On macOS, the default location is `~/Documents/Arduino/libraries/`. If your sketchbook is elsewhere, use its `libraries` directory instead. Avoid keeping duplicate installations of the same library.
+
+Restart the Arduino IDE after copying the folders, then open `CueSmart-ESP-70/CueSmart-ESP-70.ino`. Keep `SerialDiagnostics.h` in the same sketch folder. Headers such as `SPI.h`, `Preferences.h`, and `driver/twai.h` are provided by the ESP32 board package and do not require separate library installations.
+
+### Arduino CLI
+
+The included `build.sh` explicitly uses this repository's `libraries` folder, so those libraries do not need to be installed separately in the sketchbook when using the script.
+
 With Arduino CLI and the ESP32 core installed, run:
 
 ```sh
