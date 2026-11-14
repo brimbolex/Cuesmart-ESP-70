@@ -14,6 +14,12 @@ Support for additional amplifiers may be introduced in a future revision, but is
 
 Due to the ESP32-based architecture and its shared processing of Ethernet, CAN communication, and other firmware tasks, **rare timeouts may appear in R1**. Please take this limitation into account when using the gateway; timeout-free operation is not guaranteed.
 
+## Hardware and wiring
+
+- **J1 jumper / CAN transceiver RS:** `RS` must be connected either directly to **GND** for High-Speed mode or through a **10 kΩ resistor to GND** for Slope mode. **Never leave RS floating.**
+- **J4 inputs:** Use **potential-free (dry) contacts to GND only**. The inputs are **not galvanically isolated**. **Do not apply any external voltage to J4.**
+- **Hand-soldered components:** See [ASSEMBLY.md](ASSEMBLY.md) for the assembly instructions. This document is pending and is not yet included in the repository.
+
 ## Network configuration
 
 The factory configuration uses the static IP address **192.168.254.70**, subnet mask **255.255.255.0**, and gateway **192.168.254.1**. Open `http://192.168.254.70` from a computer on the same subnet to access the configuration interface. DHCP can be enabled there.
